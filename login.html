@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login</title>
+
+    <style>
+        body{
+            font-family: Arial;
+            background-color: #F3E5F5; 
+        }
+
+        .form-container{
+            min-height: 100vh;
+            text-align: center;
+            padding-top: 60px;
+        }
+
+        .form{
+            background-color: white;
+            width: 550px;
+            margin: auto;
+            color: #4A148C;
+            padding: 30px;
+            font-size: 18px;
+            border-radius: 20px;
+            border: 4px solid #CE93D8;
+            box-shadow: 0 0 20px rgba(74,20,140,0.4);
+        }
+
+        h1{
+            color: #6A1B9A;
+            margin-bottom: 25px;
+            letter-spacing: 2px;
+        }
+
+        label{
+            font-weight: bold;
+        }
+
+        input, textarea{
+            width: 80%;
+            padding: 9px;
+            margin-top: 5px;
+            border-radius: 10px;
+            border: 2px solid #CE93D8;
+            outline: none;
+            font-size: 16px;
+        }
+
+        textarea{
+            resize: none;
+            height: 60px;
+        }
+
+        .gender-box{
+            background-color: #F8BBD0;
+            padding: 15px;
+            border-radius: 15px;
+            width: 80%;
+            margin: 10px auto 20px auto;
+            text-align: left;
+        }
+
+        .gender-option{
+            display: block;
+            margin-left: 20px;
+            margin-bottom: 8px;
+            font-weight: normal;
+        }
+
+        input[type="submit"]{
+            width: 45%;
+            background-color: #8E24AA;
+            color: white;
+            font-size: 18px;
+            padding: 10px;
+            border-radius: 25px;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        input[type="submit"]:hover{
+            background-color: #AD1457;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="form-container">
+    <div class="form">
+        <h1>Login</h1>
+
+        <form action="about.html" method="get">
+
+            <label>Username:</label><br>
+            <input type="text" placeholder="Enter Username" required><br><br>
+
+            <label>Mobile Number:</label><br>
+            <input type="tel" pattern="[0-9]{10}" maxlength="10"
+                   placeholder="+91" required><br><br>
+
+            <label>Gender:</label>
+            <div class="gender-box">
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male" class="gender-option">Male</label>
+
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female" class="gender-option">Female</label>
+            </div>
+
+            <label>Address:</label><br>
+            <textarea name="address"></textarea><br><br>
+
+            <label>Pincode:</label><br>
+            <input type="number" name="pincode"><br><br>
+
+            <label>Enter OTP:</label><br>
+            <input type="tel"
+                   pattern="[0-9]{4}"
+                   maxlength="4"
+                   placeholder="4-digit OTP"
+                   required><br><br>
+
+            <input type="submit" value="Enter Boutique">
+
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
